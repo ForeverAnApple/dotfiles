@@ -183,5 +183,7 @@
 	defaultBranch = main
 [user]
 	signingkey = BFDBAC11CC3525AE
+	email = kinbd8@gmail.com
+	name = ForeverAnApple
 [gpg]
 	program = /opt/homebrew/bin/gpg
