@@ -5,7 +5,7 @@ local on_init = configs.on_init
 local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "clangd", "rust_analyzer" }
+local servers = { "html", "cssls", "clangd", "rust_analyzer", "tsserver"}
 local special_configs = {
   rust_analyzer = {
     filetypes = {"rust"},

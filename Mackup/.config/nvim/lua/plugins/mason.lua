@@ -6,7 +6,7 @@ return {
         "lua-language-server",
         "html-lsp",
         "prettier",
-        -- "rust-analyzer",
+        "typescript-language-server",
         "stylua"
       },
     },

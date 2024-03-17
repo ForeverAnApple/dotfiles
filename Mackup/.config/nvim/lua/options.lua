@@ -1,3 +1,4 @@
 require "nvchad.options"
 
--- add yours here!
+-- 88 lines long
+vim.opt.colorcolumn = "88"
