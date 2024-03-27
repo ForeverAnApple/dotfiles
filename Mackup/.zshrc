@@ -119,3 +119,6 @@ eval "$(starship init zsh)"
 # Batpipe
 # less preprocessor using bat
 eval "$(batpipe)"
+
+# fzf command line fuzzy finder
+eval "$(fzf --zsh)"
