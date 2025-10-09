@@ -1,0 +1,31 @@
+[config.custom_colors.ok]
+color = "#00A64A"
+blend = true
+
+[config.custom_colors.warning]
+color = "#FFDE3F"
+blend = true
+
+[config.custom_colors.hint]
+color = "#5D9BFF"
+blend = true
+
+[templates.terminal]
+input_path = './templates/terminal-sequences.txt'
+output_path = '~/.cache/dotfiles/md3/sequences.txt'
+
+[templates.general]
+input_path = './templates/colors.json'
+output_path = '~/.cache/dotfiles/md3/colors.json'
+
+[templates.dunst]
+input_path = './templates/dunst-colors.conf'
+output_path = '~/.cache/dotfiles/md3/dunst-colors.conf'
+
+[templates.sway]
+input_path = './templates/sway-colors.conf'
+output_path = '~/.cache/dotfiles/md3/sway-colors.conf'
+
+[templates.gtk-css]
+input_path = './templates/gtk-colors.css'
+output_path = '~/.cache/dotfiles/md3/gtk-colors.css'
