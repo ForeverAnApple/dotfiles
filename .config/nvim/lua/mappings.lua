@@ -5,35 +5,17 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jk", "<ESC>")
 
-map("n", "<leader>fm", function()
-  require("conform").format()
-end, { desc = "File Format with conform" })
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
-map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+-- :q -> :qa, :q! -> :qa!, :wq -> :wqa
+vim.cmd("cnoreabbrev <expr> q getcmdtype() == ':' && getcmdline() == 'q' ? 'qa' : 'q'")
+vim.cmd("cnoreabbrev <expr> q! getcmdtype() == ':' && getcmdline() == 'q!' ? 'qa!' : 'q!'")
+vim.cmd("cnoreabbrev <expr> wq getcmdtype() == ':' && getcmdline() == 'wq' ? 'wqa' : 'wq'")
 
--- mapping with a lua function
--- Floating terminal
-map("n", "<leader>ft", function()
-  require("nvchad.term").toggle({
-		pos = "float",
-		id ="floatTerm",
-		float_opts = {
-			border = "double"
-	  }})
-end, { desc = "Terminal toggle floating" })
-
-map("n", "<leader>lg", function()
-  require("nvchad.term").toggle({
-		pos = "float",
-		id ="lgFloatTerm",
-		float_opts = {
-			border = "double",
-			width = 0.7,
-			height = 0.6,
-			row = 0.15,
-			col = 0.15,
-	  },
-		cmd = "lazygit"
-	})
-end, { desc = "Lazygit floating terminal" })
+-- Window splits
+map("n", "<leader>sv", "<cmd>vsplit<CR>", { desc = "Split window vertically" })
+map("n", "<leader>sh", "<cmd>split<CR>", { desc = "Split window horizontally" })
+map("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
+map("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
